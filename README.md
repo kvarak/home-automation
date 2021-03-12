@@ -2,6 +2,10 @@
 
 This is my setup, there's a pletora of variations.
 
+- [Measuring moisture](#measuring-moisture)
+
+---
+
 ## Measuring moisture
 
 ### Hardware
@@ -14,5 +18,5 @@ This is my setup, there's a pletora of variations.
 
 Everything on the same Raspberry Pi:
 - [Home-assistant + Node-red (with big timer)](ha/docker-compose.yml)
-- [Phoscon GW](https://www.phoscon.de/en/conbee2)
+- [deCONZ](https://github.com/marthoc/docker-deconz)
 - [InfluxDB & Grafana](https://github.com/Praqma/rasb-influxdb)
