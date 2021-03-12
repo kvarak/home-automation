@@ -8,6 +8,8 @@ This is my setup, there's a pletora of variations.
 
 ## Measuring moisture
 
+<img align="right" src="img/grafana01.png" alt="grafana01" width="350"/>
+
 ### Hardware
 
 - Raspberry pi4
