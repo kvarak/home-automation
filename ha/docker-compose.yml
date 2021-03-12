@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  home-assistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:0.115.0
+#    image: homeassistant/home-assistant:stable
+    network_mode: "host"
+    restart: always
+    volumes:
+      - /home/pi/repos/home-assistant/config/:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    environment:
+      TZ: Sweden/Stockholm
+    labels:
+      - 'home-assistant'
+    ports:
+      - '8123:8123'
+
+  nodered:
+    image: kvarak/node-red:0.2
+#    image: nodered/node-red:1.0.1-10-minimal-arm32v6
+    restart: unless-stopped
+    ports:
+      - 1880:1880
+      - 9229:9229
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /home/pi/repos/home-assistant/nodered:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=nodered"
+      - "traefik.frontend.rule=Host:nodered.home.comreset.io"
+      - "traefik.port=1880"
+
