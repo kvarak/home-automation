@@ -19,6 +19,6 @@ This is my setup, there's a pletora of variations.
 ### Software
 
 Everything on the same Raspberry Pi:
-- [Home-assistant + Node-red (with big timer)](ha/docker-compose.yml)
+- [Home-assistant + Node-red (with big timer)](ha/README.md)
 - [deCONZ](https://github.com/marthoc/docker-deconz)
 - [InfluxDB & Grafana](https://github.com/Praqma/rasb-influxdb)
